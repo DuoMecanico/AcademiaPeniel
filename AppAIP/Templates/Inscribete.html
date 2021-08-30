@@ -1,0 +1,202 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Datos personales -->
+
+<div class="Datos">
+
+    <div id="IMG">
+        <img id="Logo" src="../static/AIP.jpeg" />
+    </div>
+    
+    <div class="DatosPersonales">
+        
+        <div class="Inputs">
+            <form class="Form" action="/Registrar" methods="POST">
+                <label class="Labels" for="Nombre">
+                    Nombre
+                </label>
+                <input type="text" placeholder="Nombre" id="Nombre" name="Nombre">
+
+                <label for="Apellido">
+                    Apellido
+                </label>
+                <input type="text" placeholder="Apellido" id="Apellido" name="Apellido">
+
+                <label for="Nacionalidad">
+                    Nacionalidad
+                </label>
+                <input type="text" placeholder="Nacionalidad" id="Nacionalidad" name="Nacionalidad">
+
+                <label for="DNI / PASAPORTE">
+                    DNI / PASAPORTE
+                </label>
+                <input type="text" placeholder="DNI / PASAPORTE" id="DNI / PASAPORTE" name="PASAPORTE">
+
+                <label for="Edad">
+                    Edad
+                </label>
+                <input type="text" placeholder="Edad" id="Edad" name="Edad">
+
+                <label for="Telefono">
+                    Telefono
+                </label>
+                <input type="text" placeholder="Telefono" id="Telefono" name="Telefono">
+ 
+                <label for="TelefonoDeContacto">
+                    Teléfono de contacto (amigo o familiar)
+                </label>
+                <input type="text" placeholder="Teléfono de contacto" id="TelefonoDeContacto" name="TelefonoDeContacto">
+
+                <button type="submit">Save</button>
+            </form>
+        </div>
+        
+        <!-- Cursos de interes -->
+
+        
+    </div>
+    <div class="Container">
+        <label>Curso de interes</label>
+        <div class="RadioBt">
+            <form>
+                <input class="LabelRd" type="radio" id="Ingles" name="Idiomas" value="Ingles">
+                <label  for="Ingles">Ingles</label>
+                
+                <input class="LabelRd" type="radio" id="Espanol" name="Idiomas" value="Espanol">
+                <label  for="Espanol">Español</label>
+    
+            </form>
+        </div>
+    </div>
+
+    <div class="Container">
+        <label>Mi horario será</label>
+        <div class="RadioBt">
+            <form>
+                <input class="LabelRd" type="radio" id="Ingles" name="Idiomas" value="Ingles">
+                <label  for="Ingles">8:00 am - 10:00 am</label>
+                <br>
+                <input class="LabelRd" type="radio" id="Espanol" name="Idiomas" value="Espanol">
+                <label  for="Espanol">10:00 am a 12:00 pm</label>
+                <br>
+                <input class="LabelRd" type="radio" id="Espanol" name="Idiomas" value="Espanol">
+                <label  for="Espanol">2:00 pm - 4:00pm</label>
+                <br>
+                <input class="LabelRd" type="radio" id="Espanol" name="Idiomas" value="Espanol">
+                <label  for="Espanol">4:00 pm - 6:00 pm</label>
+                <br>
+                <input class="LabelRd" type="radio" id="Espanol" name="Idiomas" value="Espanol">
+                <label  for="Espanol">6:00 pm - 8:00 pm</label>
+                <br>
+                <input class="LabelRd" type="radio" id="Espanol" name="Idiomas" value="Espanol">
+                <label  for="Espanol">SAB. 9 a. M. - 12 p. M</label>
+    
+            </form>
+        </div>
+    </div>
+
+    <div class="Container">
+        <label>¿Sufres de alguna enfermedad?</label>
+        <div class="RadioBt">
+            <form>
+                <label  for="Enfermedad">Especifica</label>
+                <br>
+                <input class="LabelRd" type="Text" id="Enfermedad" placeholder="Asma...">
+                <br>
+                
+                <input class="LabelRd" type="checkbox" id="No" name="SufreEnfermedad" value="No">
+                <label  for="No">No</label> 
+                
+                <br>
+                <br>
+                <label  for="TipoSangre">¿Cual es tu tipo de sangre?</label>
+                <br>
+                <input class="LabelRd" type="Text" id="TipoSangre" placeholder="O+">
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <div class="Container">
+        <label>¿Cómo se enteró de nosotros?</label>
+        <div class="RadioBt">
+            <form>
+                
+                <input class="LabelRd" type="radio" id="Facebook" name="Medios" value="Facebook">
+                <label  for="Facebook">Facebook</label> 
+                <br>
+                <input class="LabelRd" type="radio" id="Instagram" name="Medios" value="Instagram">
+                <label  for="Instagram">Instagram</label> 
+                <br>
+                <input class="LabelRd" type="radio" id="Volante" name="Medios" value="Volante">
+                <label  for="Volante">Me dieron un volante</label> 
+                <br>
+                <input class="LabelRd" type="radio" id="Marca" name="Medios" value="Marca">
+                <label  for="Marca">Vi el signo</label> 
+                <br>
+                <input class="LabelRd" type="radio" id="Conocido" name="Medios" value="Conocido">
+                <label  for="Conocido">Por un amigo o familiar</label> 
+                <br>
+                <input class="LabelRd" type="radio" id="Medios" name="Medios" value="Medios">
+                <label  for="Medios">Otros medios</label> 
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="Container">
+        <label>Seleccione su nivel académico</label>
+        <div class="RadioBt">
+            <form>
+                
+                <input class="LabelRd" type="radio" id="Básico" name="NivelAcademico" value="Básico">
+                <label  for="Básico">Básico</label> 
+                <br>
+                <input class="LabelRd" type="radio" id="Bachillerato" name="NivelAcademico" value="Bachillerato">
+                <label  for="Bachillerato">Bachillerato</label> 
+                <br>
+                <input class="LabelRd" type="radio" id="Universidad" name="NivelAcademico" value="Universidad">
+                <label  for="Universidad">Universidad</label> 
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="Compromisos">
+        <label>Lea atentamente los siguientes compromisos.</label>
+        <div class="RadioBt">
+            <ol>
+                <li>No faltes ni llegues tarde a clase y sé responsable de la tarea. </li>
+                <br>
+                <li>No ingerir ningún tipo de alimento sólido o líquido dentro de la academia. </li>
+                <br>
+                <li>Buena presentación personal y buen comportamiento en clase. </li>
+                <br>
+                <li>Cooperar en el buen funcionamiento de la academia y respetar a los demás. </li>
+                <br>
+                <li>El alumno debe participar en la clase para el desarrollo de sus habilidades y destrezas del idioma o curso técnico a cursar. </li>
+                <br>
+                <li>El alumno debe llegar temprano a clase. </li>
+                <br>
+                <li>Guarde silencio en el aula y en los pasillos, hable en voz baja. </li>
+                <br>
+                <li>Aceptar el cambio de horario en caso de problema con el tramo. </li>
+                <br>
+                <li>Cada nivel académico debe pagarse antes del inicio del período del curso. </li>
+                <br>
+                <li>La academia no desembolsa dinero ni cuotas de admisión. </li>
+            </ol>
+        </div>
+
+
+        
+    </div>
+
+</div>
+
+
+    
+
+{% endblock %}
